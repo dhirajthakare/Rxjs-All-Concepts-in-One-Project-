@@ -1,0 +1,27 @@
+<div class="container">
+    <h4>DebounceTime And DistinctUntilChange</h4>
+
+    <div class="row mt-3">
+        <div class="col-6">
+            <h6>Ex 1 only Use DebounceTime</h6>
+            <div class="form-group">
+                <label for=""> Search... </label>
+                <input #searchinput1 type="text" placeholder="Search..." class="form-control-sm">
+                <p *ngIf="msg1"><strong>Request  : </strong> <span class="text-success"> {{msg1}} </span> </p>
+            </div>
+        </div>
+        <div class="col-6">
+            <h6>Ex  2 use of DebounceTime And DistinctUntilChange</h6>
+            <div class="form-group">
+                <label for=""> Search... </label>
+                <input #searchinput2 type="text" placeholder="Search..." class="form-control-sm">
+                <p *ngIf="msg2"><strong>Request  : </strong> <span class="text-success"> {{msg2}} </span></p>
+
+            </div>
+        </div>
+    </div>
+        <div>
+
+        </div>
+
+    </div>

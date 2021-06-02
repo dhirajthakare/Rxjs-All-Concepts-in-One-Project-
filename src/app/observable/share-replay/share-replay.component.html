@@ -1,0 +1,69 @@
+<div class="container">
+
+    <h5>ShareReplay operator Example </h5>
+
+    <div class="mt-4">
+
+        <div class="row">
+
+            <div class="col">
+                <h5>Male Students </h5>
+                    <table class=" mt-4 table table-hover table-bordered table-striped">
+                        <thead>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mob</th>
+                            <th>Gender</th>
+                        </thead>
+                        <tbody *ngFor="let item of MaleStudent | async">
+                            <td>{{item.Name ? item.Name :"Emapty"}}</td>
+                            <td>{{item.Email ? item.Email :"Emapty"}}</td>
+                            <td>{{item.Mob ? item.Mob :"Emapty"}}</td>
+                            <td>{{item.Gender ? item.Gender :"Emapty"}}</td>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="col">
+                <h5>Female Students </h5>
+                    <table class=" mt-4 table table-hover table-bordered table-striped">
+                        <thead>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Mob</th>
+                            <th>Gender</th>
+                        </thead>
+                        <tbody *ngFor="let item of FemaleStudent | async">
+                            <td>{{item.Name ? item.Name :"Emapty"}}</td>
+                            <td>{{item.Email ? item.Email :"Emapty"}}</td>
+                            <td>{{item.Mob ? item.Mob :"Emapty"}}</td>
+                            <td>{{item.Gender ? item.Gender :"Emapty"}}</td>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col">
+                <div class="col">
+                    <h5>Male Students </h5>
+                        <table class=" mt-4 table table-hover table-bordered table-striped">
+                            <thead>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Mob</th>
+                                <th>Gender</th>
+                            </thead>
+                            <tbody *ngFor="let item of AllStudents | async ">
+                                <td>{{item.Name ? item.Name :"Emapty"}}</td>
+                                <td>{{item.Email ? item.Email :"Emapty"}}</td>
+                                <td>{{item.Mob ? item.Mob :"Emapty"}}</td>
+                                <td>{{item.Gender ? item.Gender :"Emapty"}}</td>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>

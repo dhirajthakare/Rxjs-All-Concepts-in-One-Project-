@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container row" [ngStyle]="{'color':colours}">
+
+            <div class="col-6">
+                <hr>
+                <h6>Filtee base on Name Length greter than 5</h6>
+                <hr>
+                
+                <table class="table table-hover table-bordered table-striped">
+                    <thead> 
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>City</th>
+                        <th>Gender</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of data">
+                            <td>{{item.name}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.address.city}}</td>
+                            <td>{{item.gender}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-6">
+                <hr>
+                <h6>Filte base on Male Gender</h6>
+                <hr>
+                <table class="table table-hover table-bordered table-striped">
+                    <thead> 
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>City</th>
+                        <th>Gender</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of data1">
+                            <td>{{item.name}}</td>
+                            <td>{{item.email}}</td>
+                            <td>{{item.address.city}}</td>
+                            <td>{{item.gender}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+    </div>
+</body>
+</html>

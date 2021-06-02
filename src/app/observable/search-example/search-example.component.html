@@ -1,0 +1,38 @@
+<div class="container">
+<h4>Search Example</h4>
+
+<div class="row mt-5 mb-5"><br>
+    <div class="col">
+        <h6>Search Content </h6>
+        <input #searchitem type="text" class="form-control mt-3 form-control-lg">
+    </div>
+
+</div>
+<hr>
+<div *ngIf="userdata.length > 0 " >
+
+    <div class="d-flex">
+        <h4>Search Result </h4>
+        <span class="ml-auto">{{searchcount}} Result Found</span>
+    </div>
+    <div class="row mt-3">
+
+        <table class="table table-hover table-bordered table-striped">
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+                <th>Gender</th>
+            </thead>
+            <tbody *ngFor="let item of userdata">
+                <td>{{item.Name? item.Name : 'Empty'}}</td>
+                <td>{{item.Email? item.Email : 'Empty'}}</td>
+                <td>{{item.Mob? item.Mob :'Empty'}}</td>
+                <td>{{item.Gender? item.Gender :'Empty'}}</td>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
+</div>

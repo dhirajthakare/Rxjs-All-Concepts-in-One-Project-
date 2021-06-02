@@ -1,0 +1,59 @@
+<div class="container">
+    <h4>Zip , combineLatest And WithLatestfrom </h4>
+    <div class="mt-4">
+
+        <div class="row">
+            <div class="col-md-2">
+               <div>
+                <strong>Names</strong><br><br>
+               </div>
+                <select class="form-control" name="Name" id="name" #names> 
+                    <option value="{{item}}"  *ngFor="let item of Names">{{item}}</option>
+
+                </select>
+            </div>
+            <div class="col-md-8 ml-auto">
+                <div>
+                    <strong>Combine latest</strong><br><br>
+
+                    <div class=" wrapper" id="elmcont1">
+        
+                    </div>
+                   </div>
+            </div>
+        </div><br><br>
+        <div class="row">
+            <div class="col-md-2">
+               <div>
+                <strong>Colors</strong><br><br>
+               </div>
+                <select class="form-control" name="Colors" id="" #colors>
+                 <option value="{{item}}"  *ngFor="let item of Colors">{{item}}</option>
+                </select>
+            </div>
+            <div class="col-md-8 ml-auto">
+                <div>
+                    <strong>Combine latest</strong><br><br>
+
+                    <div class=" wrapper" id="elmcont2">
+        
+                    </div>
+                   </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+               
+            </div>
+            <div class="col-md-8 ml-auto">
+                <div>
+                    <strong>Zip Operator</strong><br><br>
+
+                    <div class=" wrapper" id="elmcont3">
+        
+                    </div>
+                   </div>
+            </div>
+        </div>
+    </div>
+</div>

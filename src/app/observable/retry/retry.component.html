@@ -1,0 +1,42 @@
+<div class="container">
+    <h4>Retry ,retryWhen , Scan And Delay </h4><br>
+
+    <div *ngIf="service.storedata!=null" class=" mt-3 col-6">
+      
+    <hr>
+    <div class="row">
+        <strong class="col-3 offset-1"> id</strong> <span class="col-7 offset-1"> {{service.storedata[0]._id}} </span>
+    </div>
+    <hr>
+    <div class="row">
+        <strong class="col-3 offset-1"> Name</strong> <span class="col-7 offset-1"> {{service.storedata[0].Name}} </span>
+    </div>
+    <hr>
+    <div class="row">
+        <strong class="col-3 offset-1"> Email</strong> <span class="col-7 offset-1"> {{service.storedata[0].Email}} </span>
+    </div>
+    <hr>
+    <div class="row">
+    <strong class="col-3 offset-1"> Mobile</strong> <span class="col-7 offset-1"> {{service.storedata[0].Mob}} </span>
+</div>
+<hr>
+    </div>
+
+    <div class="row m-2">
+        <button [disabled]="status===true" (click)="show()"  class="btn btn-primary" type="button" >
+            <span *ngIf="status" class="spinner-border spinner-border-sm" ></span>
+                {{status? 'Fetching ...' : 'Fetch Details ' }}     
+        </button>
+    </div><br>
+    <div>
+        <p>
+            <strong>Status : </strong> <span [ngClass]="{
+                'text-success' : Statusmsg == 'Data Fetched' ,
+                'text-danger' : Statusmsg == 'Somthing wrong '
+            }">{{Statusmsg}}</span>
+            <span *ngIf="status" class="spinner-grow spinner-border-sm text-warning"></span>
+        </p>
+        <br>
+    </div>
+   
+</div>

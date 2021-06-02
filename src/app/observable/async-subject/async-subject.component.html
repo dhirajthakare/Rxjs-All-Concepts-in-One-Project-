@@ -1,0 +1,48 @@
+<div class="container">
+    <h3> Replay Subject </h3>
+    
+
+        <div class="mt-5">
+            <div class="row">
+                <div class="col">
+                    <h5> Add Video </h5>
+                </div>
+               
+
+          
+        </div>
+        <hr>
+        <div class="row justify-content-center">
+            <div class=" col-md-4">
+                <input #content type="text" class="form-control">
+            </div>
+            <div class="col-md-3">
+                <button  (click)="Addvideo(content.value)" class="btn btn-success"> Add Video </button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <h5>User-01</h5><br>
+            <hr>
+
+            <ul class=" list-unstyled">
+                <li>
+                    <strong>Video : </strong> <span>{{user1}}</span>
+                    <hr>
+                </li>
+               
+            </ul>
+            </div>
+            <div class="col-md-4">
+                <h5>Click to  complete </h5><br>
+            <hr>
+            <div>
+                <button class="btn-success" (click)="oncomplete()">Complete Subscription</button>
+            </div>
+            </div>
+           
+        </div>
+
+    </div>
+</div>
