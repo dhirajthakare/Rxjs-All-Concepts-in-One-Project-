@@ -15,7 +15,7 @@ import { MapComponent } from './observable/map/map.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { TakeComponent } from './observable/take/take.component';
 import { RetryComponent } from './observable/retry/retry.component';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule} from '@angular/common'
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { DebounceTimeComponent } from './observable/debounce-time/debounce-time.component';
 import { SubjectComponent } from './observable/subject/subject.component';

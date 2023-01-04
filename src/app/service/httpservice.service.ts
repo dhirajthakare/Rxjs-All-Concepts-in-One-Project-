@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient } from '@angular/common';
 import { Injectable } from '@angular/core';
 import { LoadingBarService } from '@ngx-loading-bar/core';
 import { Observable } from 'rxjs';
