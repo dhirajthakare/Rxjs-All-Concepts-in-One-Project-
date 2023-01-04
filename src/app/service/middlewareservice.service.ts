@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { AsyncSubject, BehaviorSubject, Observable, ReplaySubject, Subject } from 'rxjs';
 
