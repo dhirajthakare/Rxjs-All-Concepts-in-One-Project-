@@ -5,7 +5,8 @@ const routes: Routes = [
   {path:'' , redirectTo:'operator' ,pathMatch:'full'  },
   { path: 'operator', loadChildren: () => import('./module/rxjs-operator/rxjs-operator.module').then(m => m.RxjsOperatorModule) },
   { path: 'observable', loadChildren: () => import('./module/observable/observable.module').then(m => m.ObservableModule) }, { path: 'navbar', loadChildren: () => import('./common/navbar/navbar.module').then(m => m.NavbarModule) },
-  { path: 'subject', loadChildren: () => import('./module/subject/subject.module').then(m => m.SubjectModule) }];
+  { path: 'subject', loadChildren: () => import('./module/subject/subject.module').then(m => m.SubjectModule) },
+  { path: 'forms', loadChildren: () => import('./module/forms/forms.module').then(m => m.FormssModule) }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

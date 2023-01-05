@@ -7,6 +7,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { NavbarModule } from './common/navbar/navbar.module';
 import { ListOperatorComponent } from './common/list-operator/list-operator.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ListOperatorComponent } from './common/list-operator/list-operator.comp
     AppRoutingModule,
     HttpClientModule,
     LoadingBarModule,
-    NavbarModule
+    NavbarModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
