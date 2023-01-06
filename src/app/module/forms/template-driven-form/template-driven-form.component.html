@@ -9,11 +9,14 @@
         <input
           placeholder="Enter name"
           id="Name"
+          required
           name="name"
           [(ngModel)]="myFormOb.name"
           type="text"
           class="form-control"
+          #name = 'ngModel'
         />
+        <p [hidden]="name.valid || name.untouched" class="text-danger">Name is invalid </p>
       </div>
       <div class="form-group col-md-12 mb-3">
         <label for="name">Email:</label>
@@ -62,7 +65,10 @@
         />
       </div>
       <div class="form-group col-md-12 mb-3">
-        <input type="submit" class="btn btn-primary form-control" />
+        <input [disabled]="!formData.valid" type="submit" class="btn btn-primary form-control" />
+      </div>
+      <div>
+        {{myFormOb | json}}
       </div>
     </div>
   </form>
