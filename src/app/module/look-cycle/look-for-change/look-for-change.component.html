@@ -1,0 +1,6 @@
+<button (click)="changesubject()">change</button>
+
+<div class="my-4">
+  <p>Current Change Value {{ inputData.currentValue }}</p>
+  <p *ngIf="!inputData.firstChange">Previous Change Value {{ inputData.previousValue }}</p>
+</div>
