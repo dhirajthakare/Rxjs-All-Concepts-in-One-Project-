@@ -1,29 +1,34 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { LoadingBarModule } from '@ngx-loading-bar/core';
 import { NavbarModule } from './common/navbar/navbar.module';
 import { ListOperatorComponent } from './common/list-operator/list-operator.component';
 import { FormsModule } from '@angular/forms';
-
+import { MiddlewareserviceService } from './common/service/middlewareservice.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ListOperatorComponent
-  ],
+  declarations: [AppComponent, ListOperatorComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     LoadingBarModule,
     NavbarModule,
-    FormsModule
+    FormsModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    
+    {
+      provide: APP_INITIALIZER,
+      useFactory: (middleservice:MiddlewareserviceService) => () => middleservice.myAppInit(),
+      deps:[MiddlewareserviceService],
+      multi: true
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

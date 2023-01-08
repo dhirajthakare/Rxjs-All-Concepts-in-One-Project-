@@ -36,6 +36,21 @@ export class MiddlewareserviceService  {
       
      } 
 
+    myAppInit() {
+      return new Promise((resolve, rejects) => {
+          let mydata;
+          this.http.get('http://127.0.0.1:2000/api/').subscribe((res:any)=>{
+            mydata = res;
+          console.log('App Initializer middle',mydata);
+          resolve('it is resolved');
+          }, err=>{
+            console.log(err);
+            // resolve('it is reject');
+
+          }) ;
+      });
+    }
+
 
 }
 
