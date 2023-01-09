@@ -1,10 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Route } from '@angular/router';
 import { LoadingBarService } from '@ngx-loading-bar/core';
 import {
   AsyncSubject,
   BehaviorSubject,
   Observable,
+  of,
   ReplaySubject,
   Subject,
 } from 'rxjs';
@@ -56,7 +58,13 @@ export class MiddlewareserviceService {
     });
   }
 
-  callApi(){
-    return this.http.get('http://127.0.0.1:2000/api/')
+  callApi() {
+    return this.http.get('http://127.0.0.1:2000/api/');
+  }
+  preload(route: Route, fn: () => Observable<any>): Observable<any> {
+    if (route.data && route.data['preload']) {
+      return fn();
+    }
+    return of(null);
   }
 }
