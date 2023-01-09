@@ -20,6 +20,7 @@ import { SwitchMapComponent } from './switch-map/switch-map.component';
 import { TakeComponent } from './take/take.component';
 import { ToArrayComponent } from './to-array/to-array.component';
 import { ZipComponent } from './zip/zip.component';
+import { ForkjoinExpComponent } from './forkjoin-exp/forkjoin-exp.component';
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { ZipComponent } from './zip/zip.component';
     SwitchMapComponent,
     TakeComponent,
     ToArrayComponent,
-    ZipComponent
+    ZipComponent,
+    ForkjoinExpComponent
   ],
   imports: [
     CommonModule,

@@ -6,6 +6,7 @@ import { ConcatMapComponent } from './concat-map/concat-map.component';
 import { ConcatComponent } from './concat/concat.component';
 import { DebounceTimeComponent } from './debounce-time/debounce-time.component';
 import { FilterComponent } from './filter/filter.component';
+import { ForkjoinExpComponent } from './forkjoin-exp/forkjoin-exp.component';
 import { FormEventComponent } from './form-event/form-event.component';
 import { IntervalComponent } from './interval/interval.component';
 import { MapComponent } from './map/map.component';
@@ -37,7 +38,9 @@ const routes: Routes = [
     {path:'switch-map' , component:SwitchMapComponent},
     {path:'search' , component:SearchExampleComponent},
     {path:'sharereplay' , component:ShareReplayComponent},
-    {path:'zip' , component:ZipComponent}
+    {path:'zip' , component:ZipComponent},
+    {path:'forkjoin' , component:ForkjoinExpComponent}
+
 ];
 
 @NgModule({
